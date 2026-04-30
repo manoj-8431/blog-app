@@ -17,7 +17,7 @@ function Home(){
     },[]);
 
     const handleDelete = (id) => {
-        fetch(`${API_URL}api/blogs/${id}/`, {
+        fetch(`${API_URL}/api/blogs/${id}/`, {
             method: 'DELETE',
         })
         .then(() => {

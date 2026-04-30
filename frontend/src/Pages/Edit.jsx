@@ -30,7 +30,7 @@ function EditBlog(){
             author
         };
 
-        fetch(`http://127.0.0.1:8000/api/blogs/${id}/`, {
+        fetch(`${API_URL}/api/blogs/${id}/`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
