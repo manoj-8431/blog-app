@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 function Home(){
     const [blogs, setBlogs] = useState([]);
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/blogs/')
+        fetch(`${API_URL}/api/blogs/`)
         .then(res => res.json())
         .then(data => {
             setBlogs(data);
@@ -15,7 +17,7 @@ function Home(){
     },[]);
 
     const handleDelete = (id) => {
-        fetch(`http://127.0.0.1:8000/api/blogs/${id}/`, {
+        fetch(`${API_URL}api/blogs/${id}/`, {
             method: 'DELETE',
         })
         .then(() => {

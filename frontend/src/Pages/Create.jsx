@@ -7,6 +7,8 @@ function Create(){
     const [author, setAuthor] = useState("");
     const navigate = useNavigate();
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const hanldeSubmit = (e) => {
         e.preventDefault();
 
@@ -17,7 +19,7 @@ function Create(){
     };
 
     
-        fetch('http://127.0.0.1:8000/api/blogs/', {
+        fetch(`${API_URL}/api/blogs/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

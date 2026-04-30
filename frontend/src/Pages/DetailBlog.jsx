@@ -5,8 +5,10 @@ function DetailedBlog(){
     const {id} = useParams();
     const [blogs, setBlogs] = useState(null);
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/blogs/${id}/`)
+        fetch(`${API_URL}/api/blogs/${id}/`)
         .then(res => res.json())
         .then(data => setBlogs(data))
     },[]);

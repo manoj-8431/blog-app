@@ -5,12 +5,14 @@ function EditBlog(){
     const {id} = useParams();
     const navigate = useNavigate();
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [author, setAuthor] = useState("");
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/blogs/${id}/`)
+        fetch(`${API_URL}/api/blogs/${id}/`)
         .then(res => res.json())
         .then(data => {
             setTitle(data.title);

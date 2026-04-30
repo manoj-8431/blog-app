@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: django-backend
+    env: python
+    rootDir: django_rest
+    buildCommand: bash build.sh
+    startCommand: gunicorn django_rest.wsgi:application
