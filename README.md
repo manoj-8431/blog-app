@@ -6,7 +6,7 @@ A simple full stack blog app where you can create, read, update and delete blogs
 
 ## Live Links
 
-- Frontend: [https://blogs-frontend.onrender.com](https://blogs-frontend.onrender.com)
+- Frontend: [https://blogs-frontend-yvgq.onrender.com](https://https://blogs-frontend-yvgq.onrender.com/)
 - Backend API: [https://django-backend-44d6.onrender.com](https://django-backend-44d6.onrender.com)
 
 Note: The backend is on Render's free tier so it might take around 30 seconds to respond after being idle for a while.
